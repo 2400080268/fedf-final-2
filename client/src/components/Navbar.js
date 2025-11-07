@@ -16,30 +16,30 @@ function Navbar({ user, onLogout }) {
       </Link>
       <ul className="navbar-links">
         <li>
-          <Link to="/">Gallery</Link>
+          <Link to="/">🖼️ Gallery</Link>
         </li>
         <li>
-          <Link to="/announcements">Announcements</Link>
+          <Link to="/announcements">📢 Announcements</Link>
         </li>
         {user ? (
           <>
             <li>
-              <Link to="/profile">Profile</Link>
+              <Link to="/profile">👤 Profile</Link>
             </li>
             <li>
-              <button onClick={handleLogout}>Logout</button>
+              <button onClick={handleLogout}>🚪 Logout</button>
             </li>
             <li>
-              <span>Welcome, {user.name}!</span>
+              <span>👋 Welcome, {user.name}!</span>
             </li>
           </>
         ) : (
           <>
             <li>
-              <Link to="/login">Login</Link>
+              <Link to="/login">🔐 Login</Link>
             </li>
             <li>
-              <Link to="/signup">Signup</Link>
+              <Link to="/signup">✨ Signup</Link>
             </li>
           </>
         )}

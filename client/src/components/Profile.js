@@ -25,7 +25,18 @@ function Profile({ user }) {
       
       <h3>My Orders</h3>
       {myOrders.length === 0 ? (
-        <p>You have not placed any orders yet.</p>
+        <div style={{
+          textAlign: 'center',
+          padding: '40px 20px',
+          background: 'linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%)',
+          borderRadius: '15px',
+          color: '#666',
+          fontSize: '1.1rem',
+          marginTop: '20px'
+        }}>
+          <p>🛒 You have not placed any orders yet.</p>
+          <p style={{ marginTop: '10px', fontSize: '1rem', color: '#999' }}>Browse our gallery to find your favorite artwork!</p>
+        </div>
       ) : (
         <ul className="order-list">
           {myOrders.map(order => (

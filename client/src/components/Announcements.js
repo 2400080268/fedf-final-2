@@ -12,9 +12,19 @@ function Announcements() {
 
   return (
     <div className="announcements-container">
-      <h2>Announcements</h2>
+      <h2>📢 Announcements</h2>
       {announcements.length === 0 ? (
-        <p>No announcements at this time.</p>
+        <div style={{
+          textAlign: 'center',
+          padding: '60px 20px',
+          background: 'linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%)',
+          borderRadius: '20px',
+          color: '#666',
+          fontSize: '1.2rem'
+        }}>
+          <p>📭 No announcements at this time.</p>
+          <p style={{ marginTop: '10px', fontSize: '1rem', color: '#999' }}>Check back later for updates!</p>
+        </div>
       ) : (
         announcements.map(announcement => (
           <div key={announcement.id} className="announcement-card">

@@ -36,7 +36,10 @@ function Gallery({ user }) {
 
   return (
     <div className="gallery-container">
-      <h2>Art Gallery</h2>
+      <div className="hero-section">
+        <h1>Discover Beautiful Art</h1>
+        <p>Explore our curated collection of stunning artworks from talented artists around the world</p>
+      </div>
       
       {notification && (
         <div className="notification">
@@ -44,16 +47,20 @@ function Gallery({ user }) {
         </div>
       )}
 
+      <h2>Featured Artworks</h2>
+
       <div className="art-grid">
         {artworks.map(art => (
           <div key={art.id} className="art-card">
             <img src={art.image} alt={art.title} />
-            <h3>{art.title}</h3>
-            <p>By: {art.artist}</p>
-            <p>${art.price}</p>
-            <button onClick={() => handlePlaceOrder(art)}>
-              Place Order
-            </button>
+            <div className="art-card-content">
+              <h3>{art.title}</h3>
+              <p className="artist">By: {art.artist}</p>
+              <p className="price">${art.price}</p>
+              <button onClick={() => handlePlaceOrder(art)}>
+                Place Order
+              </button>
+            </div>
           </div>
         ))}
       </div>
